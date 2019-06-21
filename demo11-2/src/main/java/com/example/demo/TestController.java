@@ -30,38 +30,4 @@ public class TestController {
 
 	}
 
-	/*
-	 * @GetMapping public ResponseEntity<Map<Object, Object>> test() { List<String>
-	 * l = new ArrayList<>(); l.add("Amit"); l.add("Mohit"); l.add("Atharv");
-	 * Map<Object, Object> map = new HashMap<>(); map.put("Family-members", l);
-	 * return new ResponseEntity<Map<Object, Object>>(map, HttpStatus.OK); }
-	 */
-
-	@PostMapping
-	public ResponseEntity<Test> saveTest(@RequestBody Test test) {
-		return ResponseEntity.ok(testRepository.save(test));
-	}
-
-	@PutMapping
-	public ResponseEntity<Test> updateTest(@RequestBody Test test) {
-		return ResponseEntity.ok(testRepository.saveAndFlush(test));
-	}
-
-	@DeleteMapping("{id}")
-	public ResponseEntity<Map<Object, Object>> deleteTest(@PathVariable Integer id) {
-		testRepository.delete(id);
-		Map<Object, Object> map = new HashMap<>();
-		map.put("Message", "Successfully deleted");
-		return new ResponseEntity<Map<Object, Object>>(map, HttpStatus.OK);
-
-	}
-
-	@GetMapping
-	public ResponseEntity<Map<Object, Object>> test() {
-		List<Test> l = new ArrayList<>();
-		l = testRepository.findAll();
-		Map<Object, Object> map = new HashMap<>();
-		map.put("object", l);
-		return new ResponseEntity<Map<Object, Object>>(map, HttpStatus.OK);
-	}
 }
