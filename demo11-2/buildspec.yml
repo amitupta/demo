@@ -16,4 +16,4 @@ artifacts:
 
   files:
 
-    - 'target/demoBiranchi.jar'
+    - 'target/bird.jar'
