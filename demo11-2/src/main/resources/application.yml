@@ -1,19 +1,1 @@
-spring:   
-  jpa:
-    hibernate:
-      ddl-auto: update
-    properties:
-     hibernate:
-      dialect: org.hibernate.dialect.MySQL5Dialect
-      show-sql: true
- 
 
-  application:
-    name: demo11-2
-# database connectivity           
-  datasource:
-    url: jdbc:mysql://172.30.52.108/mydb
-    username: admin 
-    password: admin
-    driver-class-name: com.mysql.jdbc.Driver  
-    
