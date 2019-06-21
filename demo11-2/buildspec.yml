@@ -1,0 +1,19 @@
+version: 0.2
+
+ 
+
+phases:
+
+  build:
+
+    commands:
+
+      - mvn clean
+
+      - mvn install
+
+artifacts:
+
+  files:
+
+    - 'target/demoBiranchi.jar'
